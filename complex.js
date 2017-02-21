@@ -41,6 +41,43 @@ Complex.prototype.divide = function(that) {
 
 };
 
+Complex.prototype.toString = function() {
+  if (this.real == 0 && this.imaginary == 0){
+    return 0;
+  }
+
+  if (this.real == 0){
+    if (this.imaginary == -1) {
+        return "-i";
+    }
+    if (this.imaginary < 0) {
+      return this.imaginary + "i"; 
+    }
+    if (this.imaginary == 1) {
+      return "i";
+    }
+    return this.imaginary + "i";
+  }
+
+  if (this.imaginary == 0){
+    return this.real;
+  }
+
+  if (this.imaginary == -1) {
+        return this.real + " - i";
+    }
+
+  if (this.imaginary < 0){
+    return this.real + " - " + Math.abs(this.imaginary) + "i" ; 
+  }
+
+  if (this.imaginary == 1) {
+      return this.real + " + i";
+    }
+
+  return this.real + " + " + this.imaginary + "i";
+
+}
 
 
 module.exports = {
