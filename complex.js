@@ -55,6 +55,10 @@ Complex.prototype.copy = function() {
 };
 
 
+Complex.prototype.equals = function(that) {
+  return this.real - that.real == that.imaginary - this.imaginary;
+};
+
 Complex.prototype.toString = function() {
   if (this.real == 0 && this.imaginary == 0){
     return 0;
