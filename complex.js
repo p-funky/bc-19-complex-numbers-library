@@ -5,3 +5,19 @@ function Complex(real, imaginary) {
   this.real = real;
   this.imaginary = imaginary;
 };
+
+Complex.prototype.add = function(that) {
+  var r = this.real + that.real;
+  var i = this.imaginary + that.imaginary;
+  var result = {};
+  var result = new Complex(r, i);
+  return result;
+};
+
+Complex.prototype.subtract = function(that) {
+  var r = this.real - that.real;
+  var i = this.imaginary - that.imaginary;
+  var result = {};
+  var result = new Complex(r, i);
+  return result;
+};
