@@ -49,6 +49,12 @@ Complex.prototype.square = function() {
 };
 
 
+Complex.prototype.copy = function() {
+  var result = new Complex(this.real, this.imaginary);
+  return result;
+};
+
+
 Complex.prototype.toString = function() {
   if (this.real == 0 && this.imaginary == 0){
     return 0;
