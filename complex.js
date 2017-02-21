@@ -41,6 +41,14 @@ Complex.prototype.divide = function(that) {
 
 };
 
+Complex.prototype.square = function() {
+  var r = (this.real * this.real) - (this.imaginary * this.imaginary);
+  var i = 2 * (this.real * this.imaginary);
+  var result = new Complex(r, i);
+  return result;
+};
+
+
 Complex.prototype.toString = function() {
   if (this.real == 0 && this.imaginary == 0){
     return 0;
@@ -78,6 +86,7 @@ Complex.prototype.toString = function() {
   return this.real + " + " + this.imaginary + "i";
 
 }
+
 
 
 module.exports = {

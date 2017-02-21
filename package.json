@@ -1,0 +1,23 @@
+{
+  "name": "bc-19-complex-numbers-library",
+  "version": "1.0.0",
+  "description": "Console Application built on basic arithmetic on native complex numbers library",
+  "main": "app.js",
+  "scripts": {
+    "test": "jasmine tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YinkaAlabi/bc-19-complex-numbers-library.git"
+  },
+  "keywords": [
+    "complex",
+    "numbers"
+  ],
+  "author": "Yinka Alabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YinkaAlabi/bc-19-complex-numbers-library/issues"
+  },
+  "homepage": "https://github.com/YinkaAlabi/bc-19-complex-numbers-library#readme"
+}
