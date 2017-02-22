@@ -283,7 +283,48 @@
       });              
             
     });
+    
 
+    describe("It should be able to perform multiple calculations between the various methods", function(){
+
+      it("Should calculate from left to right", function() {
+        var comp1 = new myCode.Complex(2, 3);
+        var comp2 = new myCode.Complex(3, -5);
+        var comp3 = new myCode.Complex(4, -7);
+        var comp4 = new myCode.Complex(3, -10);
+        var comp5 = new myCode.Complex(2, 20);
+
+        var comp6 = comp1.add(comp2).subtract(comp3).multiply(comp4).divide(comp5);
+        
+
+        expect(typeof comp6).toEqual(typeof {});
+        expect(comp5 instanceof myCode.Complex).not.toBeFalsy(); 
+
+        expect(comp6.real).toBeCloseTo(0.50990099);
+        expect(comp6.imaginary).toBeCloseTo(-2.5990099);
+        expect(comp6.toString()).toEqual(206/404 + " - " + 1050/404 + "i");
+      });
+
+      it("Should evaluate brackets first", function() {
+
+        var comp1 = new myCode.Complex(2, 3);
+        var comp2 = new myCode.Complex(3, -5);
+        var comp3 = new myCode.Complex(4, -7);
+        var comp4 = new myCode.Complex(3, -10);
+        var comp5 = new myCode.Complex(2, 20);
+
+
+        var comp6 = comp1.add(((comp2).subtract(comp3)).multiply((comp4).divide(comp5)));
+        
+
+        expect(typeof comp6).toEqual(typeof {});
+        expect(comp6 instanceof myCode.Complex).not.toBeFalsy(); 
+
+        expect(comp6.real).toBeCloseTo(2.8762376);
+        expect(comp6.imaginary).toBeCloseTo(2.2376238);
+      });
+
+    });
 
   });
 
