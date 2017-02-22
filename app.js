@@ -131,7 +131,11 @@ function evaluate(choice){
 	}
 
 	if (choice == 5){
-		console.log(colors.bold.green("\nBYE!!!"));
+		console.log(colors.bold.blue("\nBye bye! TIA!!!\n"));
+		console.log(colors.rainbow("`(`  (o.O)"));
+		console.log(colors.rainbow(" o   ( ^ )"));
+
+		console.log("\t\t", colors.america("THANK YOU!"), colors.zebra("THANK YOU!!"), colors.rainbow("THANK YOU!!!"));
 	}
 
 }
