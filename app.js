@@ -2,7 +2,6 @@ var app = require('./complex.js');
 var prompt = require('prompt');
 var colors = require('colors');
 
-
 console.log("\n");
 console.log(colors.bold.green("================================================================================"));
 console.log("********************************************************************************");

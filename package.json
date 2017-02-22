@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/YinkaAlabi/bc-19-complex-numbers-library/issues"
   },
-  "homepage": "https://github.com/YinkaAlabi/bc-19-complex-numbers-library#readme"
+  "homepage": "https://github.com/YinkaAlabi/bc-19-complex-numbers-library#readme",
+  "dependencies": {
+    "afplay": "^1.0.3"
+  }
 }
