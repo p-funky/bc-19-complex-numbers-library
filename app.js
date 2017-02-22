@@ -1,20 +1,22 @@
 var app = require('./complex.js');
 var prompt = require('prompt');
+var colors = require('colors');
+
 
 console.log("\n");
-console.log("================================================================================");
+console.log(colors.green("================================================================================"));
 console.log("********************************************************************************");
-console.log("================================================================================");
-console.log("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t COMPLEX NUMBERS\n");
+console.log(colors.green("================================================================================"));
+console.log("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t COMPLEX NUMBERS\n".bold.blue);
 
 
 function getMenuChoice() {
     //display menu below
-    console.log("1. Add Complex Numbers");
-    console.log("2. Subtract Complex Numbers");
-    console.log("3. Multiply Complex Numbers");
-    console.log("4. Divide Complex Numbers");
-    console.log("5. Quit");
+    console.log(colors.magenta("1. Add Complex Numbers\n"));
+    console.log(colors.magenta("2. Subtract Complex Numbers\n"));
+    console.log(colors.magenta("3. Multiply Complex Numbers\n"));
+    console.log(colors.magenta("4. Divide Complex Numbers\n"));
+    console.log(colors.magenta("5. Quit"));
     requestInput();
 }
 
@@ -44,42 +46,50 @@ function evaluate(choice){
 	while(choice != 5){
 
 		if (choice == 1){
+			console.log(colors.bold.yellow("\nADDITION\n"));
 			getNumbers().then(function (result) {
-				console.log(result[0].add(result[1]));
+				console.log(colors.cyan("\n(" + result[0].toString() + ") + (" + result [1].toString() + ") = "));
+				console.log(colors.bold.green("\n" + result[0].add(result[1]).toString()));
 			});
 			break;
 		}
 
 		else if (choice == 2){
+			console.log(colors.bold.yellow("\nSUBTRACTION\n"));
 			getNumbers().then(function (result) {
-				console.log(result[0].subtract(result[1]));
+				console.log(colors.cyan("\n(" + result[0].toString() + ") - (" + result [1].toString() + ") = "));
+				console.log(colors.bold.green("\n" + result[0].subtract(result[1]).toString()));
 			});
 			break;
 		}
 
 		else if (choice == 3){
+			console.log(colors.bold.yellow("\nMULTIPLICATION\n"));
 			getNumbers().then(function (result) {
-				console.log(result[0].multiply(result[1]));
+				console.log(colors.cyan("\n(" + result[0].toString() + ") x (" + result [1].toString() + ") = "));
+				console.log(colors.bold.green("\n" + result[0].multiply(result[1]).toString()));
 			});
 			break;
 		}
 
 		else if (choice == 4){
+			console.log(colors.bold.yellow("\nDIVISION\n"));
 			getNumbers().then(function (result) {
-				console.log(result[0].divide(result[1]));
+				console.log(colors.cyan("\n(" + result[0].toString() + ") / (" + result [1].toString() + ") = "));
+				console.log(colors.bold.green("\n" + result[0].divide(result[1]).toString()));
 			});
 			break;
 		}
 
 		else{
-			console.log("\nInvalid Option");
+			console.log(colors.bold.red("\nINVALID OPTION!!! Please select an option from 1 - 5."));
 			break;
 		}
 
 	}
 
 	if (choice == 5){
-		console.log("\nBYE!!!");
+		console.log(colors.bold.green("\nBYE!!!"));
 	}
 
 }
