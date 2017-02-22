@@ -73,6 +73,7 @@ function evaluate(choice){
 			getNumbers().then(function (result) {
 				console.log(colors.cyan("\n(" + result[0].toString() + ") + (" + result [1].toString() + ") = "));
 				console.log(colors.bold.green("\n" + result[0].add(result[1]).toString()));
+				console.log(result[0].add(result[1]));
 			}, function (err) {
 				console.log(err);
 			});
