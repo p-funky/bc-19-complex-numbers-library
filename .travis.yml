@@ -2,3 +2,4 @@ language: node_js
 node_js:
   - "iojs"
   - "6"
+ env: DEPLOY_VERSION=testing COVERALLS_REPO_TOKEN="$COVERALLS_OPTIONAL_TOKEN"
