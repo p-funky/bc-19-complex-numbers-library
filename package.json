@@ -4,7 +4,8 @@
   "description": "Console Application built on basic arithmetic on native complex numbers library",
   "main": "complex.js",
   "scripts": {
-    "test": "jasmine tests.js"
+    "test": "jasmine tests.js",
+    "coveralls": "jscoverage lib && QUICKSORT_COV=1 nodeunit --reporter=lcov test | coveralls"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "homepage": "https://github.com/YinkaAlabi/bc-19-complex-numbers-library#readme",
   "dependencies": {
     "colors": "^1.1.2"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.16",
+    "jscoverage": "^0.6.0",
+    "nodeunit": "^0.11.0"
   }
 }
