@@ -2,7 +2,7 @@
   "name": "bc-19-complex-numbers-library",
   "version": "1.0.0",
   "description": "Console Application built on basic arithmetic on native complex numbers library",
-  "main": "app.js",
+  "main": "complex.js",
   "scripts": {
     "test": "jasmine tests.js"
   },
