@@ -242,18 +242,17 @@ function evaluate(choice){
 
 			console.log("\t\t", colors.bold(colors.america("THANK YOU!")), colors.bold(colors.zebra("THANK YOU!!")),
 				colors.bold(colors.rainbow("THANK YOU!!!")));
-			break;
+			
+			//option 5 for quit exits the 'loop' and function
+			return;
 
 		default:
 			console.log(colors.bold.red("\nINVALID OPTION!!! Please select an option from 1 - 5."));
 			console.log("\n");
 	}
 
-	//option 5 for quit exits the loop and function
-	if (choice !== '5'){												
-		console.log(colors.bold.yellow("Press 5 to quit or select another option to compute\n"));
-		setTimeout(getMenuChoice, 1000);
-	}
+													
+	console.log(colors.bold.yellow("Press 5 to quit or select another option to compute\n"));
+	setTimeout(getMenuChoice, 1000);
 
-	return;
 }
