@@ -179,9 +179,15 @@
         var comp2 = comp1.copy();
 
         expect(typeof comp1.equals(comp2)).toEqual("boolean");
-        expect(comp1 == comp2).toBe(false);           //That's because the natural order of equality in javascript checks for same reference
-        expect(comp1 === comp2).toBe(false);          //Naturally, if '==' is false, then '===' would be false as well
-        expect(comp1.equals(comp2)).toBe(true);       //Hence we define our own equality method
+
+        //returns false because the natural order of equality in javascript checks for same reference
+        expect(comp1 == comp2).toBe(false);           
+        
+        //Naturally, if '==' is false, then '===' would be false as well
+        expect(comp1 === comp2).toBe(false);          
+        
+        //Hence we define our own equality method
+        expect(comp1.equals(comp2)).toBe(true);       
       });
 
       it("Equals should be true only if both reals and both imaginaries are respectively equal in magnitude", function() {
@@ -202,8 +208,12 @@
         expect(comp1.equals(comp7)).toBe(true);
         expect(comp2.equals(comp7)).toBe(true);
         expect(comp5.equals(comp6)).toBe(false);
-        expect(comp1 == comp2).toBe(false);         //That's because the natural order of equality in javascript checks for same reference
-        expect(comp1 == comp7).toBe(false);         //That's because the natural order of equality in javascript checks for same reference
+        
+        //That's because the natural order of equality in javascript checks for same reference
+        expect(comp1 == comp2).toBe(false);         
+        
+        //That's because the natural order of equality in javascript checks for same reference
+        expect(comp1 == comp7).toBe(false);         
       });
 
     });
