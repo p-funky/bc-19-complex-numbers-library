@@ -1,4 +1,5 @@
 # Complex Numbers Library
+[![Build Status](https://travis-ci.org/YinkaAlabi/bc-19-complex-numbers-library.svg?branch=master)](https://travis-ci.org/YinkaAlabi/bc-19-complex-numbers-library)
 
 ## Introduction
 *  **`Complex Numbers Library`** is a Node.js (Javascript) library on complex numbers with a console app.
