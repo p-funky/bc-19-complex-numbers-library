@@ -4,8 +4,7 @@
   "description": "Console Application built on basic arithmetic on native complex numbers library",
   "main": "complex.js",
   "scripts": {
-    "test": "jasmine tests.js",
-    "test": "nodeunit test",
+    "test": "jasmine tests.js, nodeunit test",
     "coveralls": "jscoverage lib && QUICKSORT_COV=1 nodeunit --reporter=lcov test | coveralls"
   },
   "repository": {
