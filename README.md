@@ -1,6 +1,5 @@
 # Complex Numbers Library
-[![Build Status](https://travis-ci.org/YinkaAlabi/bc-19-complex-numbers-library.svg?branch=master)](https://travis-ci.org/YinkaAlabi/bc-19-complex-numbers-library) [![Code Issues](https://www.quantifiedcode.com/api/v1/project/cbcd2dd5dfca45358c97a2a9c7207d4c/badge.svg)](https://www.quantifiedcode.com/app/project/cbcd2dd5dfca45358c97a2a9c7207d4c) [![Known Vulnerabilities](https://snyk.io/test/github/yinkaalabi/bc-19-complex-numbers-library/badge.svg)](https://snyk.io/test/github/yinkaalabi/bc-19-complex-numbers-library) [![Coverage Status](https://coveralls.io/repos/github/YinkaAlabi/bc-19-complex-numbers-library/badge.svg?branch=master)](https://coveralls.io/github/YinkaAlabi/bc-19-complex-numbers-library?branch=master)
-
+[![Build Status](https://travis-ci.org/YinkaAlabi/bc-19-complex-numbers-library.svg?branch=master)](https://travis-ci.org/YinkaAlabi/bc-19-complex-numbers-library) [![Code Issues](https://www.quantifiedcode.com/api/v1/project/cbcd2dd5dfca45358c97a2a9c7207d4c/badge.svg)](https://www.quantifiedcode.com/app/project/cbcd2dd5dfca45358c97a2a9c7207d4c) [![Known Vulnerabilities](https://snyk.io/test/github/yinkaalabi/bc-19-complex-numbers-library/badge.svg)](https://snyk.io/test/github/yinkaalabi/bc-19-complex-numbers-library)
 ## Introduction
 *  **`Complex Numbers Library`** is a Node.js (Javascript) library on complex numbers with a console app.
 *  It has the following methods;
