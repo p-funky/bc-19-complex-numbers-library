@@ -18,7 +18,8 @@ function getMenuChoice() {
   console.log(colors.bold.magenta("2. Subtract Complex Numbers\n"));
   console.log(colors.bold.magenta("3. Multiply Complex Numbers\n"));
   console.log(colors.bold.magenta("4. Divide Complex Numbers\n"));
-  console.log(colors.bold.magenta("5. Quit"));
+  console.log(colors.bold.magenta("5. Quit\n"));
+  console.log(colors.bold.magenta("6. Equality of Complex Numbers"));
   requestInput();
 }
 
@@ -246,9 +247,67 @@ function evaluate(choice){
 			//option 5 for quit exits the 'loop' and function
 			return;
 
+		case '6':
+			console.log(colors.bold.yellow("\nEQUALITY"));			
+			var numbers = getNumbers();
+
+			if (numbers.constructor !== Array) {
+				console.log(numbers);
+				break;
+			}
+
+			answer = new app.Complex(0, 0);
+
+			if (numbers.length === 1) {
+					answer = "Nothing to compare";
+				}
+
+			for (var comp = 0; comp < (numbers.length - 1); comp ++) {
+
+				if (comp == 0){
+					answer = answer.add(numbers[comp]);
+				}
+
+				if (numbers.length === 2) {
+					answer = answer.equals(numbers[comp + 1]);
+					break;
+				}
+
+				else{
+					answer = answer.equals(numbers[comp + 1]);
+					if (answer === false) {
+						break;
+					}
+					
+					if(comp != numbers.length - 2) {
+						answer = (numbers[comp + 1]);
+					}
+				}
+			}
+
+			console.log("\n");
+
+			var combinedString = "";
+
+			for (var comp = 0; comp < numbers.length; comp++) {
+				if(comp != numbers.length - 1) {
+					combinedString += '(' + numbers[comp].toString() + ')' + ' === ';
+				}
+				else {
+					combinedString += '(' + numbers[comp].toString() + ')' + ' = ';
+				}
+			}
+
+			console.log(colors.bold.cyan(combinedString));
+			console.log("\n");
+			console.log(colors.bold.green(answer));
+			console.log("\n");
+			break;
+
 		default:
 			console.log(colors.bold.red("\nINVALID OPTION!!! Please select an option from 1 - 5."));
 			console.log("\n");
+
 	}
 
 													
