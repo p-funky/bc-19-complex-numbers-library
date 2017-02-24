@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for bc-19-complex-numbers-library\tests.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">bc-19-complex-numbers-library/</a> tests.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>203/203</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>38/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>203/203</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(){
+  'use strict';
+&nbsp;
+  var myCode = require('./complex.js');
+ 
+  describe("Complex Class: Create a complex number", function() {
+&nbsp;
+    describe("Constructor: It should instantiate a new complex number", function(){
+&nbsp;
+      it("The number should be a type of `object`, and an instance of the `Complex` class", function() {
+        var num = new myCode.Complex(2, 3);
+        expect(typeof num).toEqual(typeof {});
+        expect(num instanceof myCode.Complex).toBeTruthy();
+        expect(num.real).toBe(2);
+        expect(num.imaginary).toBe(3);
+      });
+&nbsp;
+      it("The number should be 0 if no parameters are passed in", function() {
+        var num = new myCode.Complex();
+        expect(typeof num).toEqual(typeof {});
+        expect(num instanceof myCode.Complex).toBeTruthy();
+        expect(num.real).toBe(0);
+        expect(num.imaginary).toBe(0);
+      });
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+    describe("It should add a complex number with another", function(){
+&nbsp;
+      it("The real and imaginary should add to one another irrespective of sign", function() {
+        var comp1 = new myCode.Complex(1, -2);
+        var comp2 = new myCode.Complex(1, 1);
+&nbsp;
+        expect(typeof comp1.add(comp2)).toEqual(typeof {});
+        expect(comp1.add(comp2) instanceof myCode.Complex).toBeTruthy();        
+        expect(comp1.add(comp2).real).toEqual(2);
+        expect(comp1.add(comp2).imaginary).toEqual(-1);
+      });
+&nbsp;
+      it("Addition can be done multiple times with complex numbers", function() {
+        var comp1 = new myCode.Complex(1, -2);
+        var comp2 = new myCode.Complex(1, 1);
+        var comp3 = new myCode.Complex(-3, -2); 
+&nbsp;
+        expect(typeof comp1.add(comp2).add(comp3)).toEqual(typeof {});
+        expect(comp1.add(comp2).add(comp3) instanceof myCode.Complex).toBeTruthy();     
+        expect(comp1.add(comp2).add(comp3).real).toEqual(-1);
+        expect(comp1.add(comp2).add(comp3).imaginary).toEqual(-3);
+      });
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+    describe("It should subtract a complex number from another", function(){
+&nbsp;
+      it("The real and imaginary should subtract from one another irrespective of sign", function() {
+        var comp1 = new myCode.Complex(1, -2);
+        var comp2 = new myCode.Complex(1, 1);
+&nbsp;
+        expect(typeof comp1.subtract(comp2)).toEqual(typeof {});
+        expect(comp1.subtract(comp2) instanceof myCode.Complex).toBeTruthy();        
+        expect(comp1.subtract(comp2).real).toEqual(0);
+        expect(comp1.subtract(comp2).imaginary).toEqual(-3);
+      });
+&nbsp;
+      it("Subtraction can be done multiple times with complex numbers", function() {
+        var comp1 = new myCode.Complex(1, -2);
+        var comp2 = new myCode.Complex(1, 1);
+        var comp3 = new myCode.Complex(-3, -2); 
+&nbsp;
+        expect(typeof comp1.subtract(comp2).subtract(comp3)).toEqual(typeof {});
+        expect(comp1.subtract(comp2).subtract(comp3) instanceof myCode.Complex).toBeTruthy();     
+        expect(comp1.subtract(comp2).subtract(comp3).real).toEqual(3);
+        expect(comp1.subtract(comp2).subtract(comp3).imaginary).toEqual(-1);
+      });
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+    describe("It should multiply a complex number with another", function(){
+&nbsp;
+      it("Multiplication should be correct irrespective of sign", function() {
+        var comp1 = new myCode.Complex(1, -2);
+        var comp2 = new myCode.Complex(1, 1);
+&nbsp;
+        expect(typeof comp1.multiply(comp2)).toEqual(typeof {});
+        expect(comp1.multiply(comp2) instanceof myCode.Complex).toBeTruthy();        
+        expect(comp1.multiply(comp2).real).toEqual(3);
+        expect(comp1.multiply(comp2).imaginary).toEqual(-1);
+      });
+&nbsp;
+      it("Multiplication can be done multiple times with complex numbers", function() {
+        var comp1 = new myCode.Complex(1, -2);
+        var comp2 = new myCode.Complex(1, 1);
+        var comp3 = new myCode.Complex(-3, -2); 
+&nbsp;
+        expect(typeof comp1.multiply(comp2).multiply(comp3)).toEqual(typeof {});
+        expect(comp1.multiply(comp2).multiply(comp3) instanceof myCode.Complex).toBeTruthy();     
+        expect(comp1.multiply(comp2).multiply(comp3).real).toEqual(-11);
+        expect(comp1.multiply(comp2).multiply(comp3).imaginary).toEqual(-3);
+      });
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+    describe("It should divide a complex number by another", function(){
+&nbsp;
+      it("Division should be correct irrespective of sign", function() {
+        var comp1 = new myCode.Complex(1, -2);
+        var comp2 = new myCode.Complex(1, 1);
+&nbsp;
+        expect(typeof comp1.divide(comp2)).toEqual(typeof {});
+        expect(comp1.divide(comp2) instanceof myCode.Complex).toBeTruthy();        
+        expect(comp1.divide(comp2).real).toEqual(-0.5);
+        expect(comp1.divide(comp2).imaginary).toEqual(-1.5);
+      });
+&nbsp;
+      it("Division can be done multiple times with complex numbers and with decimal inputs", function() {
+        var comp1 = new myCode.Complex(1, -2);
+        var comp2 = new myCode.Complex(1, 1);
+        var comp3 = new myCode.Complex(-3, -2); 
+&nbsp;
+        expect(typeof comp1.multiply(comp2).multiply(comp3)).toEqual(typeof {});
+        expect(comp1.divide(comp2).divide(comp3) instanceof myCode.Complex).toBeTruthy();     
+        expect(comp1.divide(comp2).divide(comp3).real).toEqual(4.5/13);
+        expect(comp1.divide(comp2).divide(comp3).imaginary).toEqual(3.5/13);
+      });
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+    describe("It should be the square of the complex number", function(){
+&nbsp;
+      it("Square should be correct irrespective of sign", function() {
+        var comp1 = new myCode.Complex(3, 4);
+        var comp2 = new myCode.Complex(-3, 4);
+        var comp3 = new myCode.Complex(3, -4);
+        var comp4 = new myCode.Complex(-3, -4);
+&nbsp;
+        expect(typeof comp1.square()).toEqual(typeof {});
+        expect(typeof comp2.square()).toEqual(typeof {});
+&nbsp;
+        expect(comp3.square() instanceof myCode.Complex).toBeTruthy();        
+        expect(comp4.square() instanceof myCode.Complex).toBeTruthy();
+&nbsp;
+        expect(comp1.square().real).toBe(-7);
+        expect(comp2.square().imaginary).toBe(-24);
+        expect(comp3.square().real).toBe(-7);
+        expect(comp4.square().imaginary).toBe(24);
+      });
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+    describe("It should return a copy of the complex number", function(){
+&nbsp;
+      it("Copy should be exact", function() {
+        var comp1 = new myCode.Complex(3, 4);
+        var comp2 = new myCode.Complex(-3, 4);
+&nbsp;
+        expect(typeof comp1.copy()).toEqual(typeof {});
+        expect(typeof comp2.copy()).toEqual(typeof {});
+&nbsp;
+        expect(comp1.copy() instanceof myCode.Complex).toBeTruthy();        
+        expect(comp2.copy() instanceof myCode.Complex).toBeTruthy();
+&nbsp;
+        expect(comp1.copy()).toEqual(comp1);
+        expect(comp2.copy()).toEqual(comp2);
+      });
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+    describe("It should return a boolean comparison of the equality of complex numbers", function(){
+&nbsp;
+      it("Equals should be true if complex number is a copy", function() {
+        var comp1 = new myCode.Complex(3, 4);
+        var comp2 = comp1.copy();
+&nbsp;
+        expect(typeof comp1.equals(comp2)).toEqual("boolean");
+&nbsp;
+        //returns false because the natural order of equality in javascript checks for same reference
+        expect(comp1 == comp2).toBe(false);           
+        
+        //Naturally, if '==' is false, then '===' would be false as well
+        expect(comp1 === comp2).toBe(false);          
+        
+        //Hence we define our own equality method
+        expect(comp1.equals(comp2)).toBe(true);       
+      });
+&nbsp;
+      it("Equals should be true only if both reals and both imaginaries are respectively equal in magnitude", function() {
+&nbsp;
+        var comp3 = new myCode.Complex(-2, -2);
+        var comp4 = new myCode.Complex(2, 2);
+        var comp5 = new myCode.Complex(2, 3);
+        var comp6 = new myCode.Complex(1, 2);
+        
+        expect(comp3.equals(comp4)).toBe(false);
+        expect(comp5.equals(comp6)).toBe(false);
+&nbsp;
+        var comp1 = new myCode.Complex(3, 4);
+        var comp2 = comp4.add(comp6);
+        var comp7 = new myCode.Complex(3, 4);
+&nbsp;
+        expect(comp1.equals(comp2)).toBe(true);
+        expect(comp1.equals(comp7)).toBe(true);
+        expect(comp2.equals(comp7)).toBe(true);
+        expect(comp5.equals(comp6)).toBe(false);
+        
+        //That's because the natural order of equality in javascript checks for same reference
+        expect(comp1 == comp2).toBe(false);         
+        
+        //That's because the natural order of equality in javascript checks for same reference
+        expect(comp1 == comp7).toBe(false);         
+      });
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+&nbsp;
+    describe("The number should be properly formatted in display", function(){
+&nbsp;
+      it("The number should be 0 if both paramaters are 0", function() {
+        var num = new myCode.Complex(0, 0);
+        expect(typeof num).toEqual(typeof {});
+        expect(num instanceof myCode.Complex).toBeTruthy();
+        expect(num.toString()).toBe(0);
+      });
+&nbsp;
+      it("The number should be -i and not -1i if the real is zero and the imaginary is -1", function() {
+        var num = new myCode.Complex(0, -1);
+        expect(num.real).toBe(0);
+        expect(num.imaginary).toBe(-1);
+        expect(num.toString()).toBe('-i');
+      });
+&nbsp;
+      it("The number should be -2i if the real is zero and the imaginary is -2", function() {
+        var num = new myCode.Complex(0, -2);
+        expect(num.real).toBe(0);
+        expect(num.imaginary).toBe(-2);
+        expect(num.toString()).toEqual('-2i');
+      }); 
+&nbsp;
+      it("The number should be i and not 1i if the real is 0 and the imaginary is 1", function() {
+        var num = new myCode.Complex(0, 1);
+        expect(num.real).toBe(0);
+        expect(num.imaginary).toBe(1);
+        expect(num.toString()).toBe('i');
+      });     
+&nbsp;
+      it("The number should be -i if the real is 0 and the imaginary is -1", function() {
+        var num = new myCode.Complex(0, 3);
+        expect(num.real).toBe(0);
+        expect(num.imaginary).toBe(3);
+        expect(num.toString()).toEqual('3i');
+      });
+&nbsp;
+      it("The number should be the real number when the imaginary is 0 and it should be able to accept decimal inputs", function() {
+        var num = new myCode.Complex(6.2, 0);
+        expect(num.real).toBe(6.2);
+        expect(num.imaginary).toBe(0);
+        expect(num.toString()).toEqual(6.2);
+      });
+&nbsp;
+      it("The number should be 1 - i and not 1 - 1i when the real is 1 and the imaginary is -1", function() {
+        var num = new myCode.Complex(1, -1);
+        expect(num.real).toBe(1);
+        expect(num.imaginary).toBe(-1);
+        expect(num.toString()).toBe('1 - i');
+      });            
+&nbsp;
+      it("The number should be -3 - 2.5i when the real is -3 and the imaginary is -2.5", function() {
+        var num = new myCode.Complex(-3, -2.5);
+        expect(num.real).toBe(-3);
+        expect(num.imaginary).toBe(-2.5);
+        expect(num.toString()).toBe('-3 - 2.5i');
+      });    
+&nbsp;
+      it("The number should be 4 + i and not 4 + 1i if the real is 4 and the imaginary is 1", function() {
+        var num = new myCode.Complex(4, 1);
+        expect(num.real).toBe(4);
+        expect(num.imaginary).toBe(1);
+        expect(num.toString()).toBe('4 + i');
+      });
+&nbsp;
+      it("The number should be 5 + 6i if the real is 5 and the imaginary is 6", function() {
+        var num = new myCode.Complex(5, 6);
+        expect(num.real).toEqual(5);
+        expect(num.imaginary).toEqual(6);
+        expect(num.toString()).toBe('5 + 6i');
+      });              
+            
+    });
+    
+&nbsp;
+    describe("It should be able to perform multiple calculations between the various methods", function(){
+&nbsp;
+      it("Should calculate from left to right", function() {
+        var comp1 = new myCode.Complex(2, 3);
+        var comp2 = new myCode.Complex(3, -5);
+        var comp3 = new myCode.Complex(4, -7);
+        var comp4 = new myCode.Complex(3, -10);
+        var comp5 = new myCode.Complex(2, 20);
+&nbsp;
+        var comp6 = comp1.add(comp2).subtract(comp3).multiply(comp4).divide(comp5);
+        
+&nbsp;
+        expect(typeof comp6).toEqual(typeof {});
+        expect(comp5 instanceof myCode.Complex).not.toBeFalsy(); 
+&nbsp;
+        expect(comp6.real).toBeCloseTo(0.50990099);
+        expect(comp6.imaginary).toBeCloseTo(-2.5990099);
+        expect(comp6.toString()).toEqual(206/404 + " - " + 1050/404 + "i");
+      });
+&nbsp;
+      it("Should evaluate brackets first", function() {
+&nbsp;
+        var comp1 = new myCode.Complex(2, 3);
+        var comp2 = new myCode.Complex(3, -5);
+        var comp3 = new myCode.Complex(4, -7);
+        var comp4 = new myCode.Complex(3, -10);
+        var comp5 = new myCode.Complex(2, 20);
+&nbsp;
+&nbsp;
+        var comp6 = comp1.add(((comp2).subtract(comp3)).multiply((comp4).divide(comp5)));
+        
+&nbsp;
+        expect(typeof comp6).toEqual(typeof {});
+        expect(comp6 instanceof myCode.Complex).not.toBeFalsy(); 
+&nbsp;
+        expect(comp6.real).toBeCloseTo(2.8762376);
+        expect(comp6.imaginary).toBeCloseTo(2.2376238);
+      });
+&nbsp;
+    });
+&nbsp;
+  });
+&nbsp;
+})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 24 2017 09:55:23 GMT+0100 (W. Central Africa Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
