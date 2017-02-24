@@ -29,7 +29,7 @@ function requestInput () {
 }
 
 function getNumbers () {
-	console.log(colors.bold.yellow("\nPlease input real and imaginary coefficient without the 'i' symbol."));
+	console.log(colors.bold.yellow("\nPlease input real and imaginary coefficient WITHOUT the 'i' symbol."));
 	var result = readlineSync.question("\n>>> Type numbers separated by a comma: ");
 	
 	//remove every space at the beginning and end of the string
@@ -43,7 +43,7 @@ function getNumbers () {
 
 
 	if (result.length % 2 != 0) {
-		return (colors.bold.red("\nYour input should be in pairs of (real, imaginary) for each number and should be separated by a comma.\n"));
+		return (colors.bold.red("\nYour input should be in pairs of REAL, IMAGINARY for each number and should be separated by a comma.\n"));
 	}
 
 	var params = [];
@@ -56,7 +56,7 @@ function getNumbers () {
 
 		//if entry not a number, it gets cast to NaN
 		if (isNaN (num)) {								
-			return (colors.bold.red("\nError:", entry, "is not a number\n"));
+			return (colors.bold.red("\nError:", entry, "may not be a number or may be against the specified input format\n"));
 		}
 
 		else{
