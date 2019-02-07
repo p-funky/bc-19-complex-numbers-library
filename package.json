@@ -4,7 +4,8 @@
   "description": "Console Application built on basic arithmetic on native complex numbers library",
   "main": "complex.js",
   "scripts": {
-    "test": "jasmine tests.js"
+    "test": "jasmine tests.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
   "dependencies": {
     "colors": "^1.1.2",
     "readline-sync": "^1.4.9"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "nyc": "^13.2.0"
   }
 }
