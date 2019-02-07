@@ -1,5 +1,5 @@
 # Complex Numbers Library
-[![Build Status](https://travis-ci.org/p-funky/bc-19-complex-numbers-library.svg?branch=master)](https://travis-ci.org/p-funky/bc-19-complex-numbers-library)(https://snyk.io/test/github/yinkaalabi/bc-19-complex-numbers-library/badge.svg)](https://snyk.io/test/github/yinkaalabi/bc-19-complex-numbers-library)
+[![Build Status](https://travis-ci.org/p-funky/bc-19-complex-numbers-library.svg?branch=master)](https://travis-ci.org/p-funky/bc-19-complex-numbers-library)(https://snyk.io/test/github/p-funky/bc-19-complex-numbers-library/badge.svg)](https://snyk.io/test/github/p-funky/bc-19-complex-numbers-library)
 ## Introduction
 *  **`Complex Numbers Library`** is a Node.js (Javascript) library on complex numbers with a console app.
 *  It has the following methods;
