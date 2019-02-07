@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/YinkaAlabi/bc-19-complex-numbers-library#readme",
   "dependencies": {
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "readline-sync": "^1.4.9"
   }
 }
